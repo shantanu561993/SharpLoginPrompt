@@ -1,0 +1,6 @@
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\bin\Debug\SharpLoginPrompt.exe
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\bin\Debug\SharpLoginPrompt.pdb
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\obj\Debug\SharpLoginPrompt.csprojAssemblyReference.cache
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\obj\Debug\SharpLoginPrompt.csproj.CoreCompileInputs.cache
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\obj\Debug\SharpLoginPrompt.exe
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\obj\Debug\SharpLoginPrompt.pdb

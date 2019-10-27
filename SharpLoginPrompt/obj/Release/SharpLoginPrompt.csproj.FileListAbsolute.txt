@@ -1,0 +1,12 @@
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\bin\Release\SharpLoginPrompt.exe
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\bin\Release\SharpLoginPrompt.pdb
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\obj\Release\SharpLoginPrompt.csprojAssemblyReference.cache
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\obj\Release\SharpLoginPrompt.csproj.CoreCompileInputs.cache
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\obj\Release\SharpLoginPrompt.exe
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt\SharpLoginPrompt\obj\Release\SharpLoginPrompt.pdb
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt - Copy\SharpLoginPrompt\bin\Release\SharpLoginPrompt.exe
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt - Copy\SharpLoginPrompt\bin\Release\SharpLoginPrompt.pdb
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt - Copy\SharpLoginPrompt\obj\Release\SharpLoginPrompt.csprojAssemblyReference.cache
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt - Copy\SharpLoginPrompt\obj\Release\SharpLoginPrompt.csproj.CoreCompileInputs.cache
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt - Copy\SharpLoginPrompt\obj\Release\SharpLoginPrompt.exe
+C:\Users\shankhandelwal\source\repos\SharpLoginPrompt - Copy\SharpLoginPrompt\obj\Release\SharpLoginPrompt.pdb
